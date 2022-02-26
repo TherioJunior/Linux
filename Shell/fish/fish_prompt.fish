@@ -47,6 +47,9 @@ function fish_prompt
 
   set -l st $status
 
+  # change into home directory
+  cd /home/$USER
+
   # handle shell look
   echo -n (set_color red)"┌"(set_color normal)
   __user_host
