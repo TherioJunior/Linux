@@ -1,5 +1,7 @@
 # Theme based on Darkblood theme from oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/darkblood.zsh-theme
 
+cd /home/$USER
+
 # user host
 function __user_host
   echo -n (set_color red)"["(set_color --bold white)$USER(set_color normal)(set_color red)@(set_color --bold white)(cat /etc/hostname|cut -d . -f 1)(set_color normal)(set_color red)"]" (set_color normal)
@@ -46,9 +48,6 @@ function fish_prompt
   set -g fish_color_end white
 
   set -l st $status
-
-  # change into home directory
-  cd /home/$USER
 
   # handle shell look
   echo -n (set_color red)"┌"(set_color normal)
