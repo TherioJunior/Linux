@@ -1,7 +1,5 @@
 # Theme based on Darkblood theme from oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/darkblood.zsh-theme
 
-cd /home/$USER
-
 # user host
 function __user_host
   echo -n (set_color red)"["(set_color --bold white)$USER(set_color normal)(set_color red)@(set_color --bold white)(cat /etc/hostname|cut -d . -f 1)(set_color normal)(set_color red)"]" (set_color normal)
