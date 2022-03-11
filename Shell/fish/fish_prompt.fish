@@ -18,13 +18,9 @@ function __git_status
   if [ (_git_branch_name) ]
     set -l git_branch (_git_branch_name)
 
-    if [ (_git_is_dirty) ]
-      set git_info '<'$git_branch"*"'>'
-    else
-      set git_info '<'$git_branch'>'
-    end
+    set git_info $git_branch
 
-    echo -n (set_color yellow) $git_info (set_color normal)
+    echo -n (set_color red) "["(set_color --bold white)$git_info(set_color normal)(set_color red)"]"(set_color normal)
   end
 end
 
@@ -50,8 +46,8 @@ function fish_prompt
   # handle shell look
   echo -n (set_color red)"┌"(set_color normal)
   __user_host
-  __git_status
   __get_tty
+  __git_status
   if [ $st != 0 ];
     echo -n (set_color red) "["(set_color --bold white)$st(set_color normal)(set_color red)"]"(set_color normal)
   end
