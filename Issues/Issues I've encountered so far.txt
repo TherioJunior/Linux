@@ -1,0 +1,7 @@
+List of issues I have encountered so far on my Arch linux install.
+
+> 14.02.2022:
+>> After updating NVIDIA graphics drivers to "nvidia 515.43.04-2" (or, alternatively "nvidia-dkms-515.43.04-1") on an NVIDIA GTX 980 Ti, OBS stopped working.
+
+> 15.02.2022:
+>> Freedesktop patch arrived. OBS is working again.
