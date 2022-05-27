@@ -1,6 +1,3 @@
-# config.fish
-config.fish contains aliases for commands I use often
-
 # fish_prompt.fish
 Place into:
   - ~/.local/share/omf/themes/bira/functions
